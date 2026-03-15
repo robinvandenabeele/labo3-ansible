@@ -1,0 +1,12 @@
+---
+- name: Test Ansible connection to node1
+  hosts: node1
+  gather_facts: no
+
+  tasks:
+    - name: Ping the remote server
+      ansible.builtin.ping:
+
+    - name: Print a friendly message
+      ansible.builtin.debug:
+        msg: "Ansible is working correctly on {{ inventory_hostname }}!"
