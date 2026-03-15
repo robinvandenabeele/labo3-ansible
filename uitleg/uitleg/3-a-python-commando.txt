@@ -1,0 +1,8 @@
+sudo apt update
+sudo apt upgrade
+
+# Eerst versie checken van Python (deze stond reeds geinstalleerd)
+python3 --version
+
+# Daarna pip installen zodanig dat we aan deze libraries kunnen
+sudo apt install python3-pip python3-venv -y

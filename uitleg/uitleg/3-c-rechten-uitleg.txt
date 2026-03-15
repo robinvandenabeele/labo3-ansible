@@ -1,0 +1,20 @@
+# map aanmaken 
+sudo mkdir /srv/orchestration
+
+# nieuwe groep orchestration maken.
+sudo addgroup orchestration
+
+# gebruiker student toevoegen aan de groep
+sudo usermod -aG orchestration student
+
+#student owner maken van de map /srv/orchestration
+sudo chown student:orchestration /srv/orchestration
+
+# dit is handig omdat op deze manier we een default write groep hebben
+sudo chmod g+s /srv/orchestration
+
+# read en execute op de map orchestration geven
+sudo chmod 775 /srv/orchestration
+
+# herlaad de sessie zodanig dat alles is toegepast.
+sudo su - student
