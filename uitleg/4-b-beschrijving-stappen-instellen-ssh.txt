@@ -1,0 +1,8 @@
+# aanmaken ssh sleutel - fingerprint
+ssh-keygen -t ed25519
+
+# dit zorgt ervoor dat we bij de control een publiek ssh id maken en dit komt in authorized keys waardoor ansible direct verbinding kan maken
+ssh-copy-id student@192.168.153.132
+
+# inloggen op node-1 dit lukt direct doordat we authorized zijn door de vorige stap.
+ssh student@192.168.153.132
